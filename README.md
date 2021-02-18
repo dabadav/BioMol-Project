@@ -42,7 +42,7 @@ We will obtain gene predictions using the two types of methods and we will compa
   <!--Gene predictions are based on alignments from known proteins (usually) from other genomes.-->
 
   - Run *blastx* of the unspliced sequence against the *nr database*. Since this is a huge database, this time we will run blast on the ncbi server https://blast.ncbi.nlm.nih.gov/Blast.cgi
-
+![alt text](https://prnt.sc/1008a5x)
   - blast search to identify the putative proteins (more sensitive if protein level instead of nucleotides)
   - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
   
