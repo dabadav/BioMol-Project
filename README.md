@@ -32,11 +32,11 @@ We will obtain gene predictions using the two types of methods and we will compa
   
   - FGENESH: http://www.softberry.com/berry.phtml?topic=fgenesh&group=programs&subgroup=gfindYou
 
-  > We use the "contig.fa" file to make a gene prediction using FGENESH, this will result in the generation of a txt file called "FGENESH.txt" containing the prediction.
+  > We use the "contig.fa" file to make a gene prediction using FGENESH, this will result in the generation of a txt file called "FGENESH.txt"
 
   - GENESCAN: http://argonaute.mit.edu/GENSCAN.html
 
-  > We use the "Group11_contig_194888_195063.fa" file to make a gene prediction using GeneID, this will result in the generation of a txt file called "GENESCAN.txt".
+  > We use the "contig.fa" file to make a gene prediction using GENESCAN, this will result in the generation of a txt file called "GENESCAN.txt".
 
 - **homology-based tools** with the annotations of  a closely related species (web-server/local)
   <!--Gene predictions are based on alignments from known proteins (usually) from other genomes.-->
