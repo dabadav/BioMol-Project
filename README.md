@@ -41,6 +41,8 @@ We will obtain gene predictions using the two types of methods and we will compa
 
   > We use the "contig.fa" file to make a gene prediction using GENESCAN, this will result in the generation of a txt file called "GENESCAN.txt".
 
+  - Sequences Comparison: compare them with the annotated protein in Ensembl database
+  - To obtain the multiple alignment we will use the simple MSA option from T-coffee software (http://tcoffee.crg.cat/). Which software do you think is more accurate?
 - **homology-based tools** with the annotations of  a closely related species (web-server/local)
   <!--Gene predictions are based on alignments from known proteins (usually) from other genomes.-->
 
@@ -48,9 +50,6 @@ We will obtain gene predictions using the two types of methods and we will compa
 
   > Then we transform the translated nucleotide sequence "contig.fa" to protein with blastx, in this step we generate a "tioblast.fa" containing the putative proteins.
 
-- **sequences comparison** Compare them with the annotated protein in Ensembl database
-
-  - To obtain the multiple alignment we will use the simple MSA option from T-coffee software (http://tcoffee.crg.cat/). Which software do you think is more accurate?
 
 #### Functionally characterization of the predicted proteins
 
