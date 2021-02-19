@@ -62,14 +62,20 @@ bedtools getfasta -fi Code.fa -bed GeneID.gff>exonerate.fa
 
 sed     -e    '2,$s/>.*//'    exonerate.fa     | grep     -v    '^$'     >exonerate_singleLine.fa
 ```
+  > We transform the translated nucleotide sequence "contig.fa" to protein with blastx, in this step we generate a "tioblast.fa" containing the putative proteins.
 
 #### Functionally characterization of the predicted proteins
 
 Functional annotation is an essential step in omics data analysis. It is defined as the process of attaching biological information to gene and protein sequences (such as those predicted using Ab-initio and Homology-based methods) and describing functional groups based on similarities.
 
+
 - Search the Gene Ontology database (http://geneontology.org)
 - Identify conserved protein domains in the peptides encoded by genes (you can find the FASTA file with the sequences -query.fas- here. This python script allows the programmatic access to InterPro Web Services using an API (Application Programming Interface). Use the script  iproscan5.py
-- Use   the   script  find_enrichment.py (from the  goatools python library;https://github.com/tanghaibao/goatools) to find if the genes under study (e.g. genes expressed in a specific tissue)  are enriched in a particular (or various) GO terms. For a GO enrichment analysis you need to know i) the names or database identifiers of the genes you want to test(in this example the InterPro domains found for all genes specifically expressed in the tissue analyzed in our study -study.names), ii) the names or database identifiers of the genes in the population(e.g. the InterPro domains of all genes expressed in this organism - i.e., in all tissues - population.names), iii) an association file that maps a gene or database identifier name to a GO category (InterPro2GO.map) and iv) a file with a basic version of the GO database (go-basic.obo)
+- Use   the   script  find_enrichment.py (from the  goatools python library;https://github.com/tanghaibao/goatools) to find if the genes under study (e.g. genes expressed in a specific tissue)  are enriched in a particular (or various) GO terms. For a GO enrichment analysis you need to know 
+- i) the names or database identifiers of the genes you want to test(in this example the InterPro domains found for all genes specifically expressed in the tissue analyzed in our study -study.names), 
+- ii) the names or database identifiers of the genes in the population(e.g. the InterPro domains of all genes expressed in this organism - i.e., in all tissues - population.names), 
+- iii) an association file that maps a gene or database identifier name to a GO category (InterPro2GO.map) and 
+- iv) a file with a basic version of the GO database (go-basic.obo)
 
 
 
