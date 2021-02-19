@@ -62,7 +62,7 @@ bedtools getfasta -fi Code.fa -bed GeneID.gff>exonerate.fa
 
 sed     -e    '2,$s/>.*//'    exonerate.fa     | grep     -v    '^$'     >exonerate_singleLine.fa
 ```
-  > We transform the translated nucleotide sequence "contig.fa" to protein with blastx, in this step we generate a "tioblast.fa" containing the putative proteins.
+  > We transform "tioblast.fa" file containing the putative proteins with exonerate finally outputing a exonerate_singleLine.fa
 
 #### Functionally characterization of the predicted proteins
 
