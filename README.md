@@ -48,8 +48,20 @@ We will obtain gene predictions using the two types of methods and we will compa
 
   - Run *blastx* of the unspliced sequence against the *nr database*. Since this is a huge database, this time we will run blast on the ncbi server https://blast.ncbi.nlm.nih.gov/Blast.cgi
 
-  > Then we transform the translated nucleotide sequence "contig.fa" to protein with blastx, in this step we generate a "tioblast.fa" containing the putative proteins.
+  > We transform the translated nucleotide sequence "contig.fa" to protein with blastx, in this step we generate a "tioblast.fa" containing the putative proteins.
+```bash
+bedtools getfasta -fi Code.fa -bed GeneID.gff>geneID.fa
 
+exonerate     -m     p2g     --showtargetgff     -q     tioblast.fa     -t Code.fa
+
+exonerate     -m     p2g     --showtargetgff     -q     tioblast.fa     -t Code.fa -S F
+
+exonerate     -m     p2g     --showtargetgff     -q     tioblast.fa     -t Code.fa -S F| egrep -w exon > GeneID.gff
+
+bedtools getfasta -fi Code.fa -bed GeneID.gff>exonerate.fa
+
+sed     -e    '2,$s/>.*//'    exonerate.fa     | grep     -v    '^$'     >exonerate_singleLine.fa
+```
 
 #### Functionally characterization of the predicted proteins
 
