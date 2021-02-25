@@ -37,21 +37,21 @@ We will first perform a **blastx** of the contig, against the *nr database* to g
 
 We will obtain gene predictions using the two types of methods and we will compare the results with Ensembl annotations.
 
-- **ab-initio tools** to obtain a first prediction (select closest species in model)
-  <!--Ab-initio methods: they use several elements in the genomic sequence (suchas donor and acceptor splice sites, branch site, initiation and termination codons)and codon usage to obtain a model based on a training set.-->
+1. **ab-initio tools** to obtain a first prediction (select closest species in model)
+    <!--Ab-initio methods: they use several elements in the genomic sequence (suchas donor and acceptor splice sites, branch site, initiation and termination codons)and codon usage to obtain a model based on a training set.-->
 
   - <u>GeneID  prediction</u>: https://genome.crg.cat/software/geneid/geneid.htmlWe 
 
     We use the "contig.fa" file to make a gene prediction using GeneID, this will result in the generation of a gff file called "[GeneID.gff](https://github.com/dantekali/BioMol-Project/blob/main/GeneID.gff)" containing in this case 4 predicted proteins of different aa length.
     
-| >Contig_1\|geneid_v1.2_predicted_**protein_1\|56_AA**        |
+| >GeneID\|Protein 1\| 2 exons, 56_AA [Forward]                |
 | :----------------------------------------------------------- |
 | GFLDYSYGNMFGANDESFYSRLLMSLPSIIFSFLLNEKGKADEMIEWRTSSSSGG*     |
-| >Contig_2\|geneid_v1.2_predicted_**protein_2\|329_AA**       |
+| **>GeneID\|Protein 2\|  4 exons, 329_AA **[Reverse]          |
 | MNKKTKYVLGGVVFSSSIAIVAAIFACGFMVFDISEFQNNIRSDLKEFQFYSSDSWNVMLKGKTIGFRVRRQYPSAPVGGGGQIEDGTCQCAEQSTGCPPGPPGPSGTPGHPGDSGAPGNPGQPGSAGIVEMHESMKNGCISCPQGPAGSPGPDGPPGPPGPSGNPGRESPAGPAGQPGPPGGLGPPGQNGNPGAPGNMGAPGKPGMKHTNPPGQPGPTGPMGPPGPPGNDAQFANGPPGPPGPMGPPGKPGSAGKDGQDGNPGSDGHPGSDGQYCPCPSRTPNLGVNGFSQDEENAVDTSFGFTKRNLVKMKRMMAKLHKKFSSAIA* |
-| >Contig_3\|geneid_v1.2_predicted_**protein_3\|784_AA**       |
+| **>GeneID\|Protein 3\| 7 exons, 784_AA **[Reverse]           |
 | MPRLVRDDDDSRNNRLHLSLCVLWSTAFLLLRYVDMLSSTSPLEFTKVIVASLDYSNEGMTRVILRKALTSASESSRKWTTRYLAVLASSDLPMFSDWGIQLMLRQLADESSKVVRHTIRILSRWLPEHPSRNLRKCEWSVFGEAGDLLKAHVYALEFECASDEDEVRDVIRFWMTDFNKKYLQIIDEEMKEMMFHVKRSIDGSFSRSSSDRPDTSLGVHAPLHLFAALGGHETGKRILLEENVCEELLSVIRIGKCFEELKSSLLALASIGSTDRGFEILPLDAVPTVLKIAEEHTVLTVRGIAFWALCTFSQCIEGAKRLAAFGWESNRFRYAMDIARGKISEDEGMISTPVAGTTAGSVSSTWRPARKITMQHHRHSSLFDSQINVKQSRAKSESAVSRRGNSKGRRRSQSEGDIQEKSPKRESRIDSFFSQRLWNSEKYLYKSSGTSDSSSITYHKRTVTNSSSGYHIQEEITVTVSPPGHLFPDESVAKSAATSRLSTDRRRANTTNSLFEEEEAPKTRSSTVARCIREGLKITSEELEAEGVVADTIMEPHFSCRLREKYHLMPFRVRACLHINRHVGDPIRYVFMTREEERHFADYRRQVLHDPWLFNELRKEDNAVKKTINVVPLQTVALPTEIEIMCGNIFPAKPKSDPIFSFHENDDSAVEDRGARTGHARSGIHIQPHSAYRCFHCSSNEDSVRGYPHPDAPMLRKEVLGQVDMLEIKEYPAKRLIGLRQHNPWLFQWPCMYADVLELLDEYRFKPHSRAFLQHIFYDALQI* |
-| >Contig_4\|geneid_v1.2_predicted_**protein_4\|156_AA**       |
+| **>GeneID\|Protein 4\| 3 exons, 156_AA** [Forward]           |
 | MSVSTIRAISILLLLASYTLADLPSCARAKCVHCAVDFIDRMCPTACAGCKTTHQSIQHCTYMLQAVNIQRPPQPPPAFNTQSQFTQSVNTRQISNEGGPQVQRPQPQPVHPQPQQPQQQ21HQQQFQQQQQFQPQVQTQQQPQQPLLNIPLQPHAQP |
 
   - <u>FGENESH</u>: http://www.softberry.com/berry.phtml?topic=fgenesh&group=programs&subgroup=gfindYou
@@ -83,21 +83,21 @@ We will obtain gene predictions using the two types of methods and we will compa
 To obtain the multiple alignment we will use the simple MSA option from T-coffee software (http://tcoffee.crg.cat/).
 
 ```bash
-$ bedtools getfasta -fi FOXF2_unsplicedTranscript.fa -bed geneID_FOXF2.gff > geneID_FOXF2.fa
+$ bedtools getfasta -fi CAEBREN_29266.fa -bed GeneID.gff > GeneID.fa
 
 # Now we need to concatenate both exons:
-$ sed 's/>ENSG00000137273|ENSG00000137273.6|ENST00000645481|ENST00000645481.2:5120-5284//' geneID_FOXF2.fa |grep -v '^$' >
-geneID_FOXF2_singleLine.fa
+$ sed 's/>ENSG00000137273|ENSG00000137273.6|ENST00000645481|ENST00000645481.2:5120-5284//' GeneID.fa |grep -v '^$' >
+GeneID_singleLine.fa
 
 #Paste all sequences in a single file. Example:
-$ cat FOXF2_codingSequence.fa fgenesh.fa geneID_FOXF2_singleLine.fa
-genescan.fa > FOXF2_CDS_predictedall.fa > FOXF2_CDS_predictedall.fa
+$ cat FOXF2_codingSequence.fa FGENESH.fa GeneID_singleLine.fa
+GENESCAN.fa > predictedall.fa > predictedall.fa
 ```
 
 
 
-- **homology-based tools** with the annotations of  a closely related species (web-server/local)
-  <!--Gene predictions are based on alignments from known proteins (usually) from other genomes.-->
+2. **homology-based tools** with the annotations of  a closely related species (web-server/local)
+    <!--Gene predictions are based on alignments from known proteins (usually) from other genomes.-->
 
   - Run *blastx* of the unspliced sequence against the *nr database*. Since this is a huge database, this time we will run blast on the ncbi server https://blast.ncbi.nlm.nih.gov/Blast.cgi
   - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
