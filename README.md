@@ -89,17 +89,17 @@ We first observe the results of the different software looking for proteins code
 
 ">CAEBREN_29266 [Caenorhabditis brenneri], 754 aa"
 ">GeneID|Protein 3| 7 exons, 784_AA [Reverse]""
-">FGENESH:   2   7 exon (s)   2396  -   6562   722 aa, chain -"
+**">FGENESH:   2   7 exon (s)   2396  -   6562   722 aa, chain -"**
 ">GENSCAN_predicted_peptide_2\|962_aa"
 
 As we can see the putative proteins: GeneID_Protein3, FGeneSH_Protein2 and the blastx match CAEBREN_29266 protein have similar lengths and same exon number. 
 
-In this case GENSCAN didn't give us useful prediction. So we will use the T-Coffee MSA tool to compare the selected predictions from GeneID and FGeneSH against the CAEBREN blasted protein.
+In this case GENSCAN didn't give us useful prediction. So we will use the T-Coffee MSA tool to compare the selected predictions from GeneID and FGENESH against the CAEBREN blasted protein.
 
 - We first compare the GeneID protein with the CAEBREN_29266 one, we put them in the same text file: [tcoffee_geneid.txt](https://github.com/dantekali/BioMol-Project/blob/main/tcoffee_geneid.txt)
-- Then FGeneSH protein with the CAEBREN_29266. We create the t-coffee input file by putting them in the same text file: [tcoffee_fgenesh.txt](https://github.com/dantekali/BioMol-Project/blob/main/tcoffee_fgenesh.txt)
+- Then FGENESH protein with the CAEBREN_29266. We create the t-coffee input file by putting them in the same text file: [tcoffee_fgenesh.txt](https://github.com/dantekali/BioMol-Project/blob/main/tcoffee_fgenesh.txt)
 
-> 
+By analyzing the [FGENESH](https://github.com/dantekali/BioMol-Project/blob/main/result_fgenesh.pdf) and [GeneID](https://github.com/dantekali/BioMol-Project/blob/main/result_geneid.pdf) results we conclude that the protein_2 predicted by FGENESH is almost identical to the blast result, in the other hand GeneID protein prediction presents more variations.
 
 
 
