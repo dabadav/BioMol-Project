@@ -37,7 +37,7 @@ We will obtain gene predictions using the two types of methods and we will compa
 
 We use the "contig.fa" file to make a gene prediction using GeneID, this will result in the generation of a gff file called "GeneID.gff" containing in this case 4 predicted genes.
 
-  > | >Contig_1\|geneid_v1.2_predicted_**protein_1\|56_AA**        |
+> | >Contig_1\|geneid_v1.2_predicted_**protein_1\|56_AA**        |
 > | ------------------------------------------------------------ |
   > | GFLDYSYGNMFGANDESFYSRLLMSLPSIIFSFLLNEKGKADEMIEWRTSSSSGG*     |
 > | >Contig_2\|geneid_v1.2_predicted_**protein_2\|329_AA**       |
