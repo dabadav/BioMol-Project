@@ -21,8 +21,12 @@ fetcher --url="https://github.com/dantekali/BioMol-Project/blob/main/Group11_con
 
 #### Genes annotation included in the contig
 
-We will first perform a **blastx** of the contig to get some insight of the possible gene it might code, and the species it belongs.
-https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
+We will first perform a **blastx** of the contig to get some insight of the possible *gene* it might code, and the *species* it belongs.
+  - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
+
+> | Select for downloading or viewing reports |                         Description                          |       Scientific Name       | Max Score | Total Score | Query Cover | E value | Per. Ident | Acc. Length | Accession  |
+> | :---------------------------------------: | :----------------------------------------------------------: | :-------------------------: | :-------: | :---------: | :---------: | :-----: | :--------: | :---------: | :--------: |
+> |        Select seq gb\|EGT37340.1\|        | hypothetical protein **CAEBREN_29266** [Caenorhabditis brenneri] | **Caenorhabditis brenneri** |   1335    |    1413     |     24%     |   0.0   |   86.87%   |     754     | EGT37340.1 |
 
 We will obtain gene predictions using the two types of methods and we will compare the results with Ensembl annotations.
 
