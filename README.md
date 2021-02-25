@@ -30,7 +30,7 @@ We will first perform a **blastx** of the contig, against the *nr database* to g
 
 > We download the aa sequence of the first protein match (754 aa) into a fasta format file called "[CAEBREN_29266.fa](https://github.com/dantekali/BioMol-Project/blob/main/CAEBREN_29266.fa)"
 
-| \>EGT37340.1 hypothetical protein CAEBREN_29266 [Caenorhabditis brenneri] |
+| \>EGT37340.1 hypothetical protein CAEBREN_29266 [Caenorhabditis brenneri], 754 aa |
 | :----------------------------------------------------------- |
 | MGRYVDMLSSTSPLEFTKVIVASLDYSNEGMTRVILRKALTSASESSRKWTTRYLAVLASSDLPMFSDWGIQLMLRQLADESSKVVRHTIRILSRWLPEHPSRNLRKCEWSVFGEAGDLLKAHVYALEFECASDEDEVRDVIRFWMTDFNKKYLQIIDEEMKEMMFHVKRSIDGSFSRSSSDRPDTSLGVHAPLHLFAALGGHETGKRILLEENVCEELLSVIRIGKCFEELKSSLLALASIGSTDRGFEILPLDAVPTVLKIAEEHTVLTVRGIAFWALCTFSQCIEGAKRLAAFGWESNRFRYAMDIARGKISEDEGMISTPVAGTTAGSVSSTWRPARKITMQHHRHSSLFDSQINVKQSRAKSESAVSRRGNSKGRRRSQSEGDIQEKSPKRESRIDSFFSQRLWNSEKYLYKSSGTSDSSSITYHKRTVTNSSSGYHIQEEITVTVSPPGHLFPDESVAKSAATSRLSTDRRRANTTNSLFEEEEAPKTRSSTVARCIREGLKITSEELEAEGVVADTIMEPHFSCRLREKYHLMPFRVRACLHINRHVGDPIRYVFMTREEERHFADYRRQVLHDPWLFNELRKEDNAVKKTINVVPLQTVALPTEIEIMCGNIFPAKPKSDPIFSFHENDDSAVEDRGARTGHARSGIHIQPHSAYRCFHCSSNEDSVRGYPHPDAPMLRKEVLGQVDMLEIKEYPAKRLIGLRQHNPWLFQWPCMYADVLELLDEYRFKPHSRAFLQHIFYDALQI |
 
@@ -85,9 +85,22 @@ We will obtain gene predictions using the two types of methods and we will compa
 
 To obtain the multiple alignment we will use the simple MSA option from T-coffee software (http://tcoffee.crg.cat/).
 
-```
-We first observe the results of the different software looking for proteins coded in the same region of contig with similar polypeptide chain lengths. ">FGENESH:   2   7 exon (s)   2396  -   6562   722 aa, chain -"
-```
+We first observe the results of the different software looking for proteins coded in the same region of contig with similar polypeptide chain lengths.
+
+">CAEBREN_29266 [Caenorhabditis brenneri], 754 aa"
+">GeneID|Protein 3| 7 exons, 784_AA [Reverse]""
+">FGENESH:   2   7 exon (s)   2396  -   6562   722 aa, chain -"
+">GENSCAN_predicted_peptide_2\|962_aa"
+
+As we can see the putative proteins: GeneID_Protein3, FGeneSH_Protein2 and the blastx match CAEBREN_29266 protein have similar lengths and same exon number. 
+
+In this case GENSCAN didn't give us useful prediction. So we will use the T-Coffee MSA tool to compare the selected predictions from GeneID and FGeneSH against the CAEBREN blasted protein.
+
+- We first compare the GeneID protein with the CAEBREN_29266 one, we put them in the same text file: [tcoffee_geneid.txt](https://github.com/dantekali/BioMol-Project/blob/main/tcoffee_geneid.txt)
+- Then FGeneSH protein with the CAEBREN_29266. We create the t-coffee input file by putting them in the same text file: [tcoffee_fgenesh.txt](https://github.com/dantekali/BioMol-Project/blob/main/tcoffee_fgenesh.txt)
+
+> 
+
 
 
 
