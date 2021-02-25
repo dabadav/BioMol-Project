@@ -36,12 +36,10 @@ We will obtain gene predictions using the two types of methods and we will compa
 
 - **ab-initio tools** to obtain a first prediction (select closest species in model)
   <!--Ab-initio methods: they use several elements in the genomic sequence (suchas donor and acceptor splice sites, branch site, initiation and termination codons)and codon usage to obtain a model based on a training set.-->
-  
-  - <u>GeneID  prediction</u>: https://genome.crg.cat/software/geneid/geneid.html
 
-  We use the "contig.fa" file to make a gene prediction using GeneID, this will result in the generation of a gff file called "[GeneID.gff](https://github.com/dantekali/BioMol-Project/blob/main/GeneID.gff)" containing in this case 4 predicted proteins of different aa length.
-  
+  - <u>GeneID  prediction</u>: https://genome.crg.cat/software/geneid/geneid.htmlWe 
 
+    We use the "contig.fa" file to make a gene prediction using GeneID, this will result in the generation of a gff file called "[GeneID.gff](https://github.com/dantekali/BioMol-Project/blob/main/GeneID.gff)" containing in this case 4 predicted proteins of different aa length.
 | >Contig_1\|geneid_v1.2_predicted_**protein_1\|56_AA**        |
 | :----------------------------------------------------------- |
 | GFLDYSYGNMFGANDESFYSRLLMSLPSIIFSFLLNEKGKADEMIEWRTSSSSGG*     |
@@ -54,7 +52,7 @@ We will obtain gene predictions using the two types of methods and we will compa
 
   - <u>FGENESH</u>: http://www.softberry.com/berry.phtml?topic=fgenesh&group=programs&subgroup=gfindYou
 
-We use the "contig.fa" file to make a gene prediction using FGENESH, this will result in the generation of a txt file called "[FGENESH.txt](https://github.com/dantekali/BioMol-Project/blob/main/FGENESH.txt)", containing in this case 3 predicted proteins of different aa length.
+    We use the "contig.fa" file to make a gene prediction using FGENESH, this will result in the generation of a txt file called "[FGENESH.txt](https://github.com/dantekali/BioMol-Project/blob/main/FGENESH.txt)", containing in this case 3 predicted proteins of different aa length.
 
 | \>FGENESH:   1   3 exon (s)   1526  -   2189   161 aa, chain + |
 | :----------------------------------------------------------- |
@@ -66,7 +64,7 @@ We use the "contig.fa" file to make a gene prediction using FGENESH, this will r
 
   - <u>GENESCAN</u>: http://argonaute.mit.edu/GENSCAN.html
 
-We use the "contig.fa" file to make a gene prediction using GENESCAN, this will result in the generation of a txt file called "GENESCAN.txt".
+    We use the "contig.fa" file to make a gene prediction using GENESCAN, this will result in the generation of a txt file called "[GENESCAN.txt](https://github.com/dantekali/BioMol-Project/blob/main/GENESCAN.txt)".
 
 | >GENSCAN_predicted_peptide_1\|132_aa                         |
 | :----------------------------------------------------------- |
