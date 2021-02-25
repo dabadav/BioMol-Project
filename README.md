@@ -88,8 +88,11 @@ To obtain the multiple alignment we will use the simple MSA option from T-coffee
 We first observe the results of the different software looking for proteins coded in the same region of contig with similar polypeptide chain lengths.
 
 ">CAEBREN_29266 [Caenorhabditis brenneri], 754 aa"
+
 ">GeneID|Protein 3| 7 exons, 784_AA [Reverse]"
+
 **">FGENESH:   2   7 exon (s)   2396  -   6562   722 aa, chain -"**
+
 ">GENSCAN_predicted_peptide_2\|962_aa"
 
 As we can see the putative proteins: GeneID_Protein3, FGeneSH_Protein2 and the blastx match CAEBREN_29266 protein have similar lengths and same exon number. 
