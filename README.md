@@ -28,9 +28,9 @@ fetcher --url="https://github.com/dantekali/BioMol-Project/blob/main/Group11_con
 We will first perform a **blastx** of the contig, against the *nr database* to get some insight of the possible *gene* it might code, and the *species* it belongs.
   - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
 
-> | Select for downloading or viewing reports |                         Description                          |       Scientific Name       | Max Score | Total Score | Query Cover | E value | Per. Ident | Acc. Length | Accession  |
-> | :---------------------------------------: | :----------------------------------------------------------: | :-------------------------: | :-------: | :---------: | :---------: | :-----: | :--------: | :---------: | :--------: |
-> |        Select seq gb\|EGT37340.1\|        | hypothetical protein **CAEBREN_29266** [Caenorhabditis brenneri] | **Caenorhabditis brenneri** |   1335    |    1413     |     24%     |   0.0   |   86.87%   |     754     | EGT37340.1 |
+| Select for downloading or viewing reports |                         Description                          |       Scientific Name       | Max Score | Total Score | Query Cover | E value | Per. Ident | Acc. Length | Accession  |
+| :---------------------------------------: | :----------------------------------------------------------: | :-------------------------: | :-------: | :---------: | :---------: | :-----: | :--------: | :---------: | :--------: |
+|        Select seq gb\|EGT37340.1\|        | hypothetical protein **CAEBREN_29266** [Caenorhabditis brenneri] | **Caenorhabditis brenneri** |   1335    |    1413     |     24%     |   0.0   |   86.87%   |     754     | EGT37340.1 |
 
 We will obtain gene predictions using the two types of methods and we will compare the results with Ensembl annotations.
 
@@ -53,21 +53,29 @@ We will obtain gene predictions using the two types of methods and we will compa
 | >Contig_4\|geneid_v1.2_predicted_**protein_4\|156_AA**       |
 | MSVSTIRAISILLLLASYTLADLPSCARAKCVHCAVDFIDRMCPTACAGCKTTHQSIQHCTYMLQAVNIQRPPQPPPAFNTQSQFTQSVNTRQISNEGGPQVQRPQPQPVHPQPQQPQQQ21HQQQFQQQQQFQPQVQTQQQPQQPLLNIPLQPHAQP |
 
-  - FGENESH: http://www.softberry.com/berry.phtml?topic=fgenesh&group=programs&subgroup=gfindYou
+  - <u>FGENESH</u>: http://www.softberry.com/berry.phtml?topic=fgenesh&group=programs&subgroup=gfindYou
 
 We use the "contig.fa" file to make a gene prediction using FGENESH, this will result in the generation of a txt file called "FGENESH.txt", containing in this case 3 predicted proteins of different aa length.
+
+https://github.com/dantekali/BioMol-Project/blob/main/FGENESH.txt
 
 | \>FGENESH:   1   3 exon (s)   1526  -   2189   161 aa, chain + |
 | :----------------------------------------------------------- |
 | AAENSFSPSNFVCIFKRSLFEKALNCLAKTEPITFLKCDHECHEEIVRSDRLKQVTPNIQNQIFISSELATYETELDKLCRFQSCYMNCMAPVVKEMCGEDESKHAVEIVESYVQWHADDISDWHSITGNDETLPKACQTLVKTHSKADDPILQIIGNAAL |
-| \>FGENESH:   2   7 exon (s)   2396  -   6562   722 aa, chain - |
+| **\>FGENESH:   2   7 exon (s)   2396  -   6562   722 aa, chain -** |
 | MGRYVDMLSSTSPLEFTKVIVASLDYSNEGMTRVILRKALTSASESSRKWTTRYLAVLASSDLPMFSDWGIQLMLRQLADESSKVVRHTIRILSRWLPEHPSRNLRKCEWSVFGEAGDLLKAHVYALEFECASDEDEVRDVIRFWMTDFNKKYLQIIDEEMKEMMFHVKRSIDGSFSRSSSDRPDTSLGVHAPLHLFAALGGHETGKRILLEENVCEELLSVIRIGKCFEELKSSLLALASIGSTDRGFEILPLDAVPTVLKIAEEHTVLTVRGIAFWALCTFSQCIEGAKRLAAFGWESNRFRYAMDIARGKISEDEGMISTPVAGTTAGSVSSTWRPARKITMQHHRHSSLFDERHFADYRRQVLHDPWLFNELRKEDNAVKKTINVVPLQTVALPTEIEIIPRLPTSRCSNASKRGSWSSGYVRNQRVSSKEIDWVRDYQFYSSDSWNVMLKGKTIGFRVRRQYPSAPVGGGGQIEDGTCQCAEQSTGCPPGPPGPSGTPGHPGDSGAPGNPGQPGSAGIVEMHESMKNGCISCPQGPAGSPGPDGPPGPPGPSGNPGRESPAGPAGQPGPPGGLGPPGQNGNPGAPGNMGAPGKPGMKHTNPPGQPGPTGPMGPPGPPGNDAQFANGPPGPPGPMGPPGKPGSAGKDGQDGNPGSDGHPGSDGQYCPCPSRTPNLGVNGFSQDEENAVDTSFGFTKRNLVKMKRMMAKLHKKFSSAIA |
-| FGENESH:   3   3 exon (s)   9735  -  10306   108 aa, chain + |
+| **>FGENESH:   3   3 exon (s)   9735  -  10306   108 aa, chain +** |
 | MCPTACAGCKTTHQSIQAVNIQRPPQPPPAFNTQSQFTQSVNTRQISNEGGPQVQRPQPQPVHPQPQQPQQQHQQQFQQQQQFQPQVQTQQQPQQPLLNIPLQPHAQP |
 
-  - GENESCAN: http://argonaute.mit.edu/GENSCAN.html
+  - <u>GENESCAN</u>: http://argonaute.mit.edu/GENSCAN.html
 
-  > We use the "contig.fa" file to make a gene prediction using GENESCAN, this will result in the generation of a txt file called "GENESCAN.txt".
+We use the "contig.fa" file to make a gene prediction using GENESCAN, this will result in the generation of a txt file called "GENESCAN.txt".
+
+| >GENSCAN_predicted_peptide_1\|132_aa                         |
+| :----------------------------------------------------------- |
+| TEPITFLKCDHECHEEIVRSDRLKQVTPNIQNQIFISSELATYETELDKLCRFQSCYMNCMAPVVKEMCGEDESKHAVEIVESYVQWHADDISDWHSITGNDETLPKACQTLVKTHSKADDPILQIIGNAAL |
+| **>GENSCAN_predicted_peptide_2\|962_aa**                     |
+| XCQKQQNADGTYRRNRHRSLKFQRSMKKKSVCGRNSQRVWIKRERRYVDMLSSTSPLEFTKVIVASLDYSNEGMTRVILRKALTSASESSRKWTTRYLAVLASSDLPMFSDWGIQLMLRQLADESSKVVRHTIRILSRWLPEHPSRNLRKCEWSVFGEAGDLLKAHVYALEFECASDEDEVRDVIRFWMTDFNKKYLQIIDEEMKEMMFHVKRSIDGSFSRSSSDRPDTSLGVHAPLHLFAALGGHETGKRILLEENVCEELLSVIRIGKCFEELKSSLLALASIGSTDRGFEILPLDAVPTVLKIAEEHTVLTVRGIAFWALCTFSQCIEGAKRLAAFGWESNRFRYAMDIARGKISEDEGMISTPVAGTTAGSVSSTWRPARKITMQHHRHSSLFDSQINVKQSRAKSESAVSRRGNSKGRRRSQSEGDIQEKSPKRESRIDSFFSQRLWNSEKYLYKSSGTSDSSSITYHKRTVTNSSSGYHIQEEITVTVSPPGHLFPDESVAKSAATSRLSTDRRRANTTNSLFEEEEAPKTRSSTVARCIREGLKITSEELEAEGVVADTIMEPHFSCRLREKYHLMPFRVRACLHINRHVGDPIRYVFMTREEERHFADYRRQVLHDPWLFNELRKEDNAVKKTINVVPLQTVALPTEIEIMCGNIFPAKPKSDPIFSFHENDDSAVEDRGARTGHARSGIHIQPHSAYRCFHCSSNEDSGKTIGFRVRRQYPSAPVGGGGQIEDGTCQCAEQSTGCPPGPPGPSGTPGHPGDSGAPGNPGQPGSAGIVEMHESMKNGCISCPQGPAGSPGPDGPPGPPGPSGNPGRESPAGPAGQPGPPGGLGPPGQNGNPGAPGNMGAPGKPGMKHTNPPGQPGPTGPMGPPGPPGNDAQFANGPPGPPGPMGEFLRCDRVYVIIIMFSGPPGKPGSAGKDGQDGNPGSDGHPGSDGQYCPCPSRTPNLGVNG |
 
   - Sequences Comparison: compare them with the annotated protein in Ensembl database
   - To obtain the multiple alignment we will use the simple MSA option from T-coffee software (http://tcoffee.crg.cat/). Which software do you think is more accurate?
