@@ -1,27 +1,60 @@
 ﻿
-## gff-version 2
-## date Wed Feb 17 15:31:09 2021
+## date Thu Feb 25 14:14:15 2021
 ## source-version: geneid v 1.2 -- geneid@imim.es
 # Sequence Contig - Length = 10375 bps
 # Optimal Gene Structure. 4 genes. Score = 194.70 
 # Gene 1 (Forward). 2 exons. 56 aa. Score = 0.62 
-Contig  geneid_v1.2     Internal        1       160      0.62   +       0       Contig_1
-Contig  geneid_v1.2     Terminal        1526    1533     0.00   +       2       Contig_1
-# Gene 2 (Reverse). 4 exons. 329 aa. Score = 65.88 
-Contig  geneid_v1.2     Terminal        2396    2516     5.22   -       1       Contig_2
-Contig  geneid_v1.2     Internal        2567    2696    14.12   -       2       Contig_2
-Contig  geneid_v1.2     Internal        2748    3336    45.54   -       0       Contig_2
-Contig  geneid_v1.2     First   3383    3529     0.99   -       0       Contig_2
-# Gene 3 (Reverse). 7 exons. 784 aa. Score = 101.75 
-Contig  geneid_v1.2     Terminal        3957    4095    -0.02   -       1       Contig_3
-Contig  geneid_v1.2     Internal        4140    4242    10.75   -       2       Contig_3
-Contig  geneid_v1.2     Internal        4292    4613    14.36   -       0       Contig_3
-Contig  geneid_v1.2     Internal        4665    5097    13.92   -       1       Contig_3
-Contig  geneid_v1.2     Internal        5143    5345     8.66   -       0       Contig_3
-Contig  geneid_v1.2     Internal        5391    6447    55.01   -       1       Contig_3
-Contig  geneid_v1.2     First   9179    9273    -0.93   -       0       Contig_3
-# Gene 4 (Forward). 3 exons. 156 aa. Score = 26.46 
-Contig  geneid_v1.2     First   9612    9785     7.00   +       0       Contig_4
-Contig  geneid_v1.2     Internal        9828    9971     8.39   +       0       Contig_4
-Contig  geneid_v1.2     Internal        10157   10306   11.08   +       0       Contig_4
+Internal        1      160	 0.62	+ 0 1	 0.57	-0.88	10.64	 0.00	AA   1: 54 Contig_1
+Terminal     1526     1533	 0.00	+ 2 0	 7.27	 0.00	 0.00	 0.00	AA  54: 56 Contig_1
 
+>Contig_1|geneid_v1.2_predicted_protein_1|56_AA
+GFLDYSYGNMFGANDESFYSRLLMSLPSIIFSFLLNEKGKADEMIEWRTSSSSGG*
+
+# Gene 2 (Reverse). 4 exons. 329 aa. Score = 65.88 
+Terminal     2396     2516	 5.22	- 1 0	 0.00	 4.10	15.48	 0.00	AA 289:329 Contig_2
+Internal     2567     2696	14.12	- 2 2	 4.12	 5.34	28.70	 0.00	AA 246:289 Contig_2
+Internal     2748     3336	45.54	- 0 1	 5.30	-0.11	103.75	 0.00	AA  50:246 Contig_2
+   First     3383     3529	 0.99	- 0 0	 2.11	 0.64	 7.73	 0.00	AA   1: 49 Contig_2
+
+>Contig_2|geneid_v1.2_predicted_protein_2|329_AA
+MNKKTKYVLGGVVFSSSIAIVAAIFACGFMVFDISEFQNNIRSDLKEFQFYSSDSWNVML
+KGKTIGFRVRRQYPSAPVGGGGQIEDGTCQCAEQSTGCPPGPPGPSGTPGHPGDSGAPGN
+PGQPGSAGIVEMHESMKNGCISCPQGPAGSPGPDGPPGPPGPSGNPGRESPAGPAGQPGP
+PGGLGPPGQNGNPGAPGNMGAPGKPGMKHTNPPGQPGPTGPMGPPGPPGNDAQFANGPPG
+PPGPMGPPGKPGSAGKDGQDGNPGSDGHPGSDGQYCPCPSRTPNLGVNGFSQDEENAVDT
+SFGFTKRNLVKMKRMMAKLHKKFSSAIA*
+
+# Gene 3 (Reverse). 7 exons. 784 aa. Score = 101.75 
+Terminal     3957     4095	-0.02	- 1 0	 0.00	 0.25	 8.54	 0.00	AA 738:784 Contig_3
+Internal     4140     4242	10.75	- 2 2	 3.27	 9.33	17.36	 0.00	AA 704:738 Contig_3
+Internal     4292     4613	14.36	- 0 1	 2.51	 3.99	32.84	 0.00	AA 597:704 Contig_3
+Internal     4665     5097	13.92	- 1 0	 3.11	 5.55	29.23	 0.00	AA 452:596 Contig_3
+Internal     5143     5345	 8.66	- 0 2	 3.43	 4.66	18.25	 0.00	AA 385:452 Contig_3
+Internal     5391     6447	55.01	- 1 0	 3.75	 7.20	117.75	 0.00	AA  32:384 Contig_3
+   First     9179     9273	-0.93	- 0 2	 0.89	-1.01	 6.98	 0.00	AA   1: 32 Contig_3
+
+>Contig_3|geneid_v1.2_predicted_protein_3|784_AA
+MPRLVRDDDDSRNNRLHLSLCVLWSTAFLLLRYVDMLSSTSPLEFTKVIVASLDYSNEGM
+TRVILRKALTSASESSRKWTTRYLAVLASSDLPMFSDWGIQLMLRQLADESSKVVRHTIR
+ILSRWLPEHPSRNLRKCEWSVFGEAGDLLKAHVYALEFECASDEDEVRDVIRFWMTDFNK
+KYLQIIDEEMKEMMFHVKRSIDGSFSRSSSDRPDTSLGVHAPLHLFAALGGHETGKRILL
+EENVCEELLSVIRIGKCFEELKSSLLALASIGSTDRGFEILPLDAVPTVLKIAEEHTVLT
+VRGIAFWALCTFSQCIEGAKRLAAFGWESNRFRYAMDIARGKISEDEGMISTPVAGTTAG
+SVSSTWRPARKITMQHHRHSSLFDSQINVKQSRAKSESAVSRRGNSKGRRRSQSEGDIQE
+KSPKRESRIDSFFSQRLWNSEKYLYKSSGTSDSSSITYHKRTVTNSSSGYHIQEEITVTV
+SPPGHLFPDESVAKSAATSRLSTDRRRANTTNSLFEEEEAPKTRSSTVARCIREGLKITS
+EELEAEGVVADTIMEPHFSCRLREKYHLMPFRVRACLHINRHVGDPIRYVFMTREEERHF
+ADYRRQVLHDPWLFNELRKEDNAVKKTINVVPLQTVALPTEIEIMCGNIFPAKPKSDPIF
+SFHENDDSAVEDRGARTGHARSGIHIQPHSAYRCFHCSSNEDSVRGYPHPDAPMLRKEVL
+GQVDMLEIKEYPAKRLIGLRQHNPWLFQWPCMYADVLELLDEYRFKPHSRAFLQHIFYDA
+LQI*
+
+# Gene 4 (Forward). 3 exons. 156 aa. Score = 26.46 
+   First     9612     9785	 7.00	+ 0 0	-0.23	 4.79	18.85	 0.00	AA   1: 58 Contig_4
+Internal     9828     9971	 8.39	+ 0 0	 2.96	 3.19	20.01	 0.00	AA  59:106 Contig_4
+Internal    10157    10306	11.08	+ 0 0	 3.98	-0.88	29.71	 0.00	AA 107:156 Contig_4
+
+>Contig_4|geneid_v1.2_predicted_protein_4|156_AA
+MSVSTIRAISILLLLASYTLADLPSCARAKCVHCAVDFIDRMCPTACAGCKTTHQSIQHC
+TYMLQAVNIQRPPQPPPAFNTQSQFTQSVNTRQISNEGGPQVQRPQPQPVHPQPQQPQQQ
+HQQQFQQQQQFQPQVQTQQQPQQPLLNIPLQPHAQP

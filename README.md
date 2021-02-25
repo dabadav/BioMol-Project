@@ -21,7 +21,7 @@ fetcher --url="https://github.com/dantekali/BioMol-Project/blob/main/Group11_con
 
 #### Genes annotation included in the contig
 
-We will first perform a **blastx** of the contig to get some insight of the possible *gene* it might code, and the *species* it belongs.
+We will first perform a **blastx** of the contig, against the *nr database* to get some insight of the possible *gene* it might code, and the *species* it belongs.
   - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
 
 > | Select for downloading or viewing reports |                         Description                          |       Scientific Name       | Max Score | Total Score | Query Cover | E value | Per. Ident | Acc. Length | Accession  |
