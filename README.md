@@ -28,6 +28,9 @@ fetcher --url="https://github.com/dantekali/BioMol-Project/blob/main/Group11_con
 We will first perform a **blastx** of the contig, against the *nr database* to get some insight of the possible *gene* it might code, and the *species* it belongs.
   - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
 
+> We download the aa sequence of the first protein match into a fasta format file called "[CAEBREN_29266.fa](https://github.com/dantekali/BioMol-Project/blob/main/CAEBREN_29266.fa)".
+>
+
 | Select for downloading or viewing reports |                         Description                          |       Scientific Name       | Max Score | Total Score | Query Cover | E value | Per. Ident | Acc. Length | Accession  |
 | :---------------------------------------: | :----------------------------------------------------------: | :-------------------------: | :-------: | :---------: | :---------: | :-----: | :--------: | :---------: | :--------: |
 |        Select seq gb\|EGT37340.1\|        | hypothetical protein **CAEBREN_29266** [Caenorhabditis brenneri] | **Caenorhabditis brenneri** |   1335    |    1413     |     24%     |   0.0   |   86.87%   |     754     | EGT37340.1 |
@@ -73,8 +76,26 @@ We will obtain gene predictions using the two types of methods and we will compa
 | **>GENSCAN_predicted_peptide_2\|962_aa**                     |
 | XCQKQQNADGTYRRNRHRSLKFQRSMKKKSVCGRNSQRVWIKRERRYVDMLSSTSPLEFTKVIVASLDYSNEGMTRVILRKALTSASESSRKWTTRYLAVLASSDLPMFSDWGIQLMLRQLADESSKVVRHTIRILSRWLPEHPSRNLRKCEWSVFGEAGDLLKAHVYALEFECASDEDEVRDVIRFWMTDFNKKYLQIIDEEMKEMMFHVKRSIDGSFSRSSSDRPDTSLGVHAPLHLFAALGGHETGKRILLEENVCEELLSVIRIGKCFEELKSSLLALASIGSTDRGFEILPLDAVPTVLKIAEEHTVLTVRGIAFWALCTFSQCIEGAKRLAAFGWESNRFRYAMDIARGKISEDEGMISTPVAGTTAGSVSSTWRPARKITMQHHRHSSLFDSQINVKQSRAKSESAVSRRGNSKGRRRSQSEGDIQEKSPKRESRIDSFFSQRLWNSEKYLYKSSGTSDSSSITYHKRTVTNSSSGYHIQEEITVTVSPPGHLFPDESVAKSAATSRLSTDRRRANTTNSLFEEEEAPKTRSSTVARCIREGLKITSEELEAEGVVADTIMEPHFSCRLREKYHLMPFRVRACLHINRHVGDPIRYVFMTREEERHFADYRRQVLHDPWLFNELRKEDNAVKKTINVVPLQTVALPTEIEIMCGNIFPAKPKSDPIFSFHENDDSAVEDRGARTGHARSGIHIQPHSAYRCFHCSSNEDSGKTIGFRVRRQYPSAPVGGGGQIEDGTCQCAEQSTGCPPGPPGPSGTPGHPGDSGAPGNPGQPGSAGIVEMHESMKNGCISCPQGPAGSPGPDGPPGPPGPSGNPGRESPAGPAGQPGPPGGLGPPGQNGNPGAPGNMGAPGKPGMKHTNPPGQPGPTGPMGPPGPPGNDAQFANGPPGPPGPMGEFLRCDRVYVIIIMFSGPPGKPGSAGKDGQDGNPGSDGHPGSDGQYCPCPSRTPNLGVNG |
 
-  - Sequences Comparison: compare them with the annotated protein in Ensembl database
-  - To obtain the multiple alignment we will use the simple MSA option from T-coffee software (http://tcoffee.crg.cat/). Which software do you think is more accurate?
+
+
+<u>Sequences Comparison</u>: compare them with the annotated protein in found in blastx nr database: [CAEBREN_29266.fa](https://github.com/dantekali/BioMol-Project/blob/main/CAEBREN_29266.fa)
+
+To obtain the multiple alignment we will use the simple MSA option from T-coffee software (http://tcoffee.crg.cat/).
+
+```bash
+$ bedtools getfasta -fi FOXF2_unsplicedTranscript.fa -bed geneID_FOXF2.gff > geneID_FOXF2.fa
+
+# Now we need to concatenate both exons:
+$ sed 's/>ENSG00000137273|ENSG00000137273.6|ENST00000645481|ENST00000645481.2:5120-5284//' geneID_FOXF2.fa |grep -v '^$' >
+geneID_FOXF2_singleLine.fa
+
+#Paste all sequences in a single file. Example:
+$ cat FOXF2_codingSequence.fa fgenesh.fa geneID_FOXF2_singleLine.fa
+genescan.fa > FOXF2_CDS_predictedall.fa > FOXF2_CDS_predictedall.fa
+```
+
+
+
 - **homology-based tools** with the annotations of  a closely related species (web-server/local)
   <!--Gene predictions are based on alignments from known proteins (usually) from other genomes.-->
 
