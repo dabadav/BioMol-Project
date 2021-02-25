@@ -21,8 +21,8 @@ fetcher --url="https://github.com/dantekali/BioMol-Project/blob/main/Group11_con
 
 #### Genes annotation included in the contig
 
-We will first perform a Blast Protein search
-  - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
+We will first perform a **blastx** of the contig to get some insight of the possible gene it might code, and the species it belongs.
+https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
 
 We will obtain gene predictions using the two types of methods and we will compare the results with Ensembl annotations.
 
@@ -47,7 +47,7 @@ We will obtain gene predictions using the two types of methods and we will compa
   <!--Gene predictions are based on alignments from known proteins (usually) from other genomes.-->
 
   - Run *blastx* of the unspliced sequence against the *nr database*. Since this is a huge database, this time we will run blast on the ncbi server https://blast.ncbi.nlm.nih.gov/Blast.cgi
-
+  - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
   > We transform the translated nucleotide sequence "contig.fa" to protein with blastx, in this step we generate a "tioblast.fa" containing the putative proteins.
 ```bash
 bedtools getfasta -fi Code.fa -bed GeneID.gff>geneID.fa
