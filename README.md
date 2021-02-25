@@ -19,6 +19,10 @@ npm install -g github-files-fetcher
 fetcher --url="https://github.com/dantekali/BioMol-Project/blob/main/Group11_contig_194888_195063.fa"  --out="~/Desktop/Project"
 ```
 
+
+
+------
+
 #### Genes annotation included in the contig
 
 We will first perform a **blastx** of the contig, against the *nr database* to get some insight of the possible *gene* it might code, and the *species* it belongs.
@@ -87,6 +91,10 @@ bedtools getfasta -fi Code.fa -bed GeneID.gff>exonerate.fa
 sed     -e    '2,$s/>.*//'    exonerate.fa     | grep     -v    '^$'     >exonerate_singleLine.fa
 ```
   > We transform "tioblast.fa" file containing the putative proteins with exonerate finally outputing a exonerate_singleLine.fa
+
+
+
+------
 
 #### Functionally characterization of the predicted proteins
 
