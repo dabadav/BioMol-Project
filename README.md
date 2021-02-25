@@ -35,9 +35,13 @@ We will obtain gene predictions using the two types of methods and we will compa
   
   - GeneID  prediction: https://genome.crg.cat/software/geneid/geneid.html
 
-  We use the "contig.fa" file to make a gene prediction using GeneID, this will result in the generation of a gff file called "GeneID.gff" containing in this case 4 predicted proteins of different length.
+  We use the "contig.fa" file to make a gene prediction using GeneID, this will result in the generation of a gff file called "
   
-  https://github.com/dantekali/BioMol-Project/blob/main/GeneID.gff
+  [GeneID.gff]: https://github.com/dantekali/BioMol-Project/blob/main/GeneID.gff
+  
+  " containing in this case 4 predicted proteins of different length.
+  
+  
 
 
 > | >Contig_1\|geneid_v1.2_predicted_**protein_1\|56_AA**        |
