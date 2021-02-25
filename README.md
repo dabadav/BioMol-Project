@@ -22,7 +22,7 @@ fetcher --url="https://github.com/dantekali/BioMol-Project/blob/main/Group11_con
 #### Genes annotation included in the contig
 
 We will first perform a Blast Protein search
-https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
+  - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
 
 We will obtain gene predictions using the two types of methods and we will compare the results with Ensembl annotations.
 
