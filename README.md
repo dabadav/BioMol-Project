@@ -36,15 +36,25 @@ We will obtain gene predictions using the two types of methods and we will compa
   - GeneID  prediction: https://genome.crg.cat/software/geneid/geneid.html
 
   > We use the "contig.fa" file to make a gene prediction using GeneID, this will result in the generation of a gff file called "GeneID.gff" containing in this case 4 predicted genes.
+  >
+  > | >Contig_1\|geneid_v1.2_predicted_**protein_1\|56_AA**        |      |
+> | ------------------------------------------------------------ | ---- |
+  > | GFLDYSYGNMFGANDESFYSRLLMSLPSIIFSFLLNEKGKADEMIEWRTSSSSGG*     |      |
+> | >Contig_2\|geneid_v1.2_predicted_**protein_2\|329_AA**       |      |
+  > | MNKKTKYVLGGVVFSSSIAIVAAIFACGFMVFDISEFQNNIRSDLKEFQFYSSDSWNVMLKGKTIGFRVRRQYPSAPVGGGGQIEDGTCQCAEQSTGCPPGPPGPSGTPGHPGDSGAPGNPGQPGSAGIVEMHESMKNGCISCPQGPAGSPGPDGPPGPPGPSGNPGRESPAGPAGQPGPPGGLGPPGQNGNPGAPGNMGAPGKPGMKHTNPPGQPGPTGPMGPPGPPGNDAQFANGPPGPPGPMGPPGKPGSAGKDGQDGNPGSDGHPGSDGQYCPCPSRTPNLGVNGFSQDEENAVDTSFGFTKRNLVKMKRMMAKLHKKFSSAIA* |      |
+> | >Contig_3\|geneid_v1.2_predicted_**protein_3\|784_AA**       |      |
+  > | MPRLVRDDDDSRNNRLHLSLCVLWSTAFLLLRYVDMLSSTSPLEFTKVIVASLDYSNEGM<br/>TRVILRKALTSASESSRKWTTRYLAVLASSDLPMFSDWGIQLMLRQLADESSKVVRHTIR<br/>ILSRWLPEHPSRNLRKCEWSVFGEAGDLLKAHVYALEFECASDEDEVRDVIRFWMTDFNK<br/>KYLQIIDEEMKEMMFHVKRSIDGSFSRSSSDRPDTSLGVHAPLHLFAALGGHETGKRILL<br/>EENVCEELLSVIRIGKCFEELKSSLLALASIGSTDRGFEILPLDAVPTVLKIAEEHTVLT<br/>VRGIAFWALCTFSQCIEGAKRLAAFGWESNRFRYAMDIARGKISEDEGMISTPVAGTTAG<br/>SVSSTWRPARKITMQHHRHSSLFDSQINVKQSRAKSESAVSRRGNSKGRRRSQSEGDIQE<br/>KSPKRESRIDSFFSQRLWNSEKYLYKSSGTSDSSSITYHKRTVTNSSSGYHIQEEITVTV<br/>SPPGHLFPDESVAKSAATSRLSTDRRRANTTNSLFEEEEAPKTRSSTVARCIREGLKITS<br/>EELEAEGVVADTIMEPHFSCRLREKYHLMPFRVRACLHINRHVGDPIRYVFMTREEERHF<br/>ADYRRQVLHDPWLFNELRKEDNAVKKTINVVPLQTVALPTEIEIMCGNIFPAKPKSDPIF<br/>SFHENDDSAVEDRGARTGHARSGIHIQPHSAYRCFHCSSNEDSVRGYPHPDAPMLRKEVL<br/>GQVDMLEIKEYPAKRLIGLRQHNPWLFQWPCMYADVLELLDEYRFKPHSRAFLQHIFYDA<br/>LQI* |      |
+> |                                                              |      |
+  > |                                                              |      |
   
   - FGENESH: http://www.softberry.com/berry.phtml?topic=fgenesh&group=programs&subgroup=gfindYou
-
+  
   > We use the "contig.fa" file to make a gene prediction using FGENESH, this will result in the generation of a txt file called "FGENESH.txt"
-
+  
   - GENESCAN: http://argonaute.mit.edu/GENSCAN.html
-
+  
   > We use the "contig.fa" file to make a gene prediction using GENESCAN, this will result in the generation of a txt file called "GENESCAN.txt".
-
+  
   - Sequences Comparison: compare them with the annotated protein in Ensembl database
   - To obtain the multiple alignment we will use the simple MSA option from T-coffee software (http://tcoffee.crg.cat/). Which software do you think is more accurate?
 - **homology-based tools** with the annotations of  a closely related species (web-server/local)
