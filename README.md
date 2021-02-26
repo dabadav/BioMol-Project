@@ -109,10 +109,7 @@ By analyzing the [FGENESH](https://github.com/dantekali/BioMol-Project/blob/main
 
 2. **homology-based tools** with the annotations of  a closely related species (web-server/local)
     <!--Gene predictions are based on alignments from known proteins (usually) from other genomes.-->
-
-  - Run *blastx* of the unspliced sequence against the *nr database*. Since this is a huge database, this time we will run blast on the ncbi server https://blast.ncbi.nlm.nih.gov/Blast.cgi
-  - https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
-  > We transform the translated nucleotide sequence "contig.fa" to protein with blastx, in this step we generate a "tioblast.fa" containing the putative proteins.
+    
 ```bash
 bedtools getfasta -fi Code.fa -bed GeneID.gff>geneID.fa
 
@@ -126,9 +123,7 @@ bedtools getfasta -fi Code.fa -bed GeneID.gff>exonerate.fa
 
 sed     -e    '2,$s/>.*//'    exonerate.fa     | grep     -v    '^$'     >exonerate_singleLine.fa
 ```
-  > We transform "tioblast.fa" file containing the putative proteins with exonerate finally outputing a exonerate_singleLine.fa
-
-
+  > We transform "CAEBREN_29266.fa" file containing the putative proteins with exonerate finally outputing a exonerate_singleLine.fa
 
 ------
 
@@ -136,15 +131,10 @@ sed     -e    '2,$s/>.*//'    exonerate.fa     | grep     -v    '^$'     >exoner
 
 Functional annotation is an essential step in omics data analysis. It is defined as the process of attaching biological information to gene and protein sequences (such as those predicted using Ab-initio and Homology-based methods) and describing functional groups based on similarities.
 
+We have found this data using UniProt because this is the way we have been able to find the function  we wanted to find.
 
-- Search the Gene Ontology database (http://geneontology.org)
-- Identify conserved protein domains in the peptides encoded by genes (you can find the FASTA file with the sequences -query.fas- here. This python script allows the programmatic access to InterPro Web Services using an API (Application Programming Interface). Use the script  iproscan5.py
-- Use   the   script  find_enrichment.py (from the  goatools python library;https://github.com/tanghaibao/goatools) to find if the genes under study (e.g. genes expressed in a specific tissue)  are enriched in a particular (or various) GO terms. For a GO enrichment analysis you need to know 
-- i) the names or database identifiers of the genes you want to test(in this example the InterPro domains found for all genes specifically expressed in the tissue analyzed in our study -study.names), 
-- ii) the names or database identifiers of the genes in the population(e.g. the InterPro domains of all genes expressed in this organism - i.e., in all tissues - population.names), 
-- iii) an association file that maps a gene or database identifier name to a GO category (InterPro2GO.map) and 
-- iv) a file with a basic version of the GO database (go-basic.obo)
+The function of the protein we have worked with is TOR signaling: TOR signaling are a series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that act as serine/threonine kinases in response to nutrient availability or growth factors. 
 
 
 
-#### Discuss the performance of the different methods. Can you guess to which species does your contig correspond?
+
