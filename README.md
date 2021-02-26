@@ -123,7 +123,7 @@ bedtools getfasta -fi Code.fa -bed GeneID.gff>exonerate.fa
 
 sed     -e    '2,$s/>.*//'    exonerate.fa     | grep     -v    '^$'     >exonerate_singleLine.fa
 ```
-  > We transform "CAEBREN_29266.fa" file containing the putative proteins with exonerate finally outputing a exonerate_singleLine.fa
+  > We transform "CAEBREN_29266.fa" file containing the putative proteins with exonerate finally outputting a exonerate_singleLine.fa
 
 ------
 
@@ -131,7 +131,7 @@ sed     -e    '2,$s/>.*//'    exonerate.fa     | grep     -v    '^$'     >exoner
 
 Functional annotation is an essential step in omics data analysis. It is defined as the process of attaching biological information to gene and protein sequences (such as those predicted using Ab-initio and Homology-based methods) and describing functional groups based on similarities.
 
-We have found this data using UniProt because this is the way we have been able to find the function  we wanted to find.
+We have found this data using [UniProt](https://github.com/dantekali/BioMol-Project/blob/main/UniProt.png) because this is the way we have been able to find the function  we wanted to find.
 
 The function of the protein we have worked with is TOR signaling: TOR signaling are a series of molecular signals mediated by TOR (Target of rapamycin) proteins, members of the phosphoinositide (PI) 3-kinase related kinase (PIKK) family that act as serine/threonine kinases in response to nutrient availability or growth factors. 
 
